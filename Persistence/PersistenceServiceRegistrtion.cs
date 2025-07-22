@@ -14,7 +14,7 @@ namespace Persistence
     {
         public static IServiceCollection ConfigurePersistenceService(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<PNSDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("staggingConnectionString")));
+            services.AddDbContext<ARMSDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("staggingConnectionString")));
 
 
            // services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
