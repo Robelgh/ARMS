@@ -9,16 +9,16 @@ namespace Persistence
     public static partial class PersistenceServiceRegistrtion
     {
         public class ECXHRDbContextFactory
-            : IDesignTimeDbContextFactory<ARMSDbContext>
+            : IDesignTimeDbContextFactory<PASDbContext>
         {
-            public ARMSDbContext CreateDbContext(string[] args)
+            public PASDbContext CreateDbContext(string[] args)
             {
                 IConfigurationRoot configuration = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
-                var builder = new DbContextOptionsBuilder<ARMSDbContext>();
+                var builder = new DbContextOptionsBuilder<PASDbContext>();
                 var connectionString = configuration.GetConnectionString("staggingConnectionString");
                 builder.UseSqlServer(connectionString);
-                return new ARMSDbContext(builder.Options);
+                return new PASDbContext(builder.Options);
             }
 
         }

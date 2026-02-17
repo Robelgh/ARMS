@@ -11,9 +11,9 @@ namespace Persistence.Repository
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        private readonly ARMSDbContext _context;
+        private readonly PASDbContext _context;
 
-        public GenericRepository(ARMSDbContext context)
+        public GenericRepository(PASDbContext context)
         {
             _context = context;
         }

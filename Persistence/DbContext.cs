@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace Persistence
 {
-    public class ARMSDbContext : DbContext
+    public class PASDbContext : DbContext
     {
-        public readonly DbContextOptions<ARMSDbContext> _context;
+        public readonly DbContextOptions<PASDbContext> _context;
         
 
-        public ARMSDbContext(DbContextOptions<ARMSDbContext> options) : base(options)
+        public PASDbContext(DbContextOptions<PASDbContext> options) : base(options)
         {
             _context = options;
         }
